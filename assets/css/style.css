@@ -1,9 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {  
-    background-image: url('../images/javascript-illustration.png');
-    background-size: cover;    
-    background-repeat: no-repeat;
+background-color: rgb(252, 252, 251);
+height: 100vh;
+font-family:'Montserrat', Geneva, Verdana, sans-serif;
+align-items: center;
+margin: 0;
 }
 
-#check {
+
+/* Header */
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.navbar-nav{
+    margin-top: 16px;
+}
+.navbar-brand{
+    font-size: 30px;
+    text-decoration: none;
     color: black;
+    margin: 6px;
+    padding-left: 10px;
+
+}
+.nav-item{
+list-style-type: none;
+display: inline-block;
+font-size: 20px;
+padding-right: 60px;
+
+}
+
+/* jumbotron */
+
+.jumbotron-fluid{
+   height: 300px;
+   text-align:left;
+   background-image: url('../images/diego-ph-vTitvl4O2kE-unsplash.jpg');
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+
+.jumbotron-fluid h1{
+    margin-top: 0;
+    padding-left: 30px;
+    font-weight: 200;
+    font-size: 70px;
+}
+
+.jumbotron-fluid p{
+padding-left: 30px;
+}
+hr{
+    color: rgb(98, 97, 97);
+    width: 100px;
+    text-align: left;
+
 }
