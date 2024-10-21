@@ -64,6 +64,21 @@ hr {
   text-align: left;
 }
 
+/* Form styling */
+#weather-form input[type="text"] {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  width: 100%;
+}
+
+#weather-form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
 /* Footer */
 
 footer {
@@ -107,5 +122,9 @@ footer a {
   .social-icon {
     width: 12px;
     height: 12px;
+  }
+  #weather-form button {
+    /* responsive button for larger screens */
+    width: auto;
   }
 }
