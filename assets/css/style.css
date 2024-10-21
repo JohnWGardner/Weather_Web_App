@@ -5,6 +5,7 @@ height: 100vh;
 font-family:'Montserrat', Geneva, Verdana, sans-serif;
 align-items: center;
 margin: 0;
+
 }
 
 
@@ -13,6 +14,7 @@ margin: 0;
 .navbar{
     display:flex;
     justify-content: space-between;
+    background-color: #050d35;
     
 }
 
@@ -22,7 +24,7 @@ margin: 0;
 .navbar-brand{
     font-size: 30px;
     text-decoration: none;
-    color: rgb(120, 79, 3);
+    color: #CEB992;
     margin: 6px;
     padding-left: 10px;
 
@@ -32,8 +34,12 @@ list-style-type: none;
 display: inline-block;
 font-size: 20px;
 padding-right: 60px;
-color: rgb(120, 79, 3);;
 
+}
+
+.nav-item a{
+    color: #CEB992;
+text-decoration: none;
 }
 
 /* jumbotron */
