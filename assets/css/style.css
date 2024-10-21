@@ -15,7 +15,7 @@ margin: 0;
     display:flex;
     justify-content: space-between;
     background-color: #050d35;
-    
+  
 }
 
 .navbar-nav{
@@ -25,7 +25,6 @@ margin: 0;
     font-size: 30px;
     text-decoration: none;
     color: #CEB992;
-    margin: 6px;
     padding-left: 10px;
 
 }
@@ -49,7 +48,7 @@ text-decoration: none;
    text-align:left;
    background-image: url('../images/2110.w026.n002.972B.p1.972.jpg');
    background-repeat: no-repeat;
-   background-size:cover
+   background-size:cover;
 }
   
 
