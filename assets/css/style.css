@@ -1,9 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {  
-    background-image: url('../images/javascript-illustration.png');
-    background-size: cover;    
-    background-repeat: no-repeat;
+background-color: rgb(252, 252, 251);
+height: 100vh;
+font-family:'Montserrat', Geneva, Verdana, sans-serif;
+align-items: center;
+margin: 0;
+
 }
 
-#check {
-    color: black;
+
+/* Header */
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    background-color: #050d35;
+    
+}
+
+.navbar-nav{
+    margin-top: 16px;
+}
+.navbar-brand{
+    font-size: 30px;
+    text-decoration: none;
+    color: #CEB992;
+    margin: 6px;
+    padding-left: 10px;
+
+}
+.nav-item{
+list-style-type: none;
+display: inline-block;
+font-size: 20px;
+padding-right: 60px;
+
+}
+
+.nav-item a{
+    color: #CEB992;
+text-decoration: none;
+}
+
+/* jumbotron */
+
+.jumbotron-fluid{
+   height: 300px;
+   text-align:left;
+   background-image: url('../images/2110.w026.n002.972B.p1.972.jpg');
+   background-repeat: no-repeat;
+   background-size:cover
+}
+  
+
+.jumbotron-fluid h1{
+    margin-top: 0;
+    padding-left: 30px;
+    font-weight: 300;
+    font-size: 70px;
+    color: #fff;
+}
+
+.jumbotron-fluid p{
+padding-left: 30px;
+color: #fff;
+}
+hr{
+    color: rgb(98, 97, 97);
+    width: 100px;
+    text-align: left;
+
 }
