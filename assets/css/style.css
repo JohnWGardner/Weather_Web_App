@@ -99,3 +99,25 @@ footer a {
     margin-right: 8px;
 }
 
+/* Media Queries */
+
+
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  footer {
+    text-align: center;
+  }
+}
