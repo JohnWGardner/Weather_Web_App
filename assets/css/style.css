@@ -79,6 +79,27 @@ hr {
   width: 100%;
 }
 
+/* weather display card styling */
+#weather-display .card {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  /* add subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#weather-display .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#weather-display .card-text {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
 /* Footer */
 
 footer {
