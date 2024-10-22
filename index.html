@@ -66,11 +66,12 @@
         aria-labelledby="weather-form-label"
       >
         <h2 id="weather-form-label">Check ther Weather</h2>
-        <form>
+        <!-- <form id="weather-form"> -->
           <div class="form-row">
             <div class="col">
               <input
                 type="text"
+                id="city"
                 class="form-control"
                 placeholder="Enter city name"
                 aria-label="City Name"
@@ -78,10 +79,10 @@
               />
             </div>
             <div class="col">
-              <button type="submit" class="btn btn-primary">Get Weather</button>
+              <button id="weatherBtn" class="btn btn-primary">Get Weather</button>
             </div>
           </div>
-        </form>
+        <!-- </form> -->
       </div>
     </section>
 
@@ -91,7 +92,7 @@
         class="container mt-5"
         id="weather-display"
         aria-labelledby="weather-display-label"
-        hidden
+        
       >
         <h2 id="weather-display-label">Current Weather</h2>
         <div class="card">
@@ -102,7 +103,7 @@
               id="weather-icon"
               src=""
               alt="Weather Icon"
-              hidden
+             
             />
             <p class="card-text">
               Temperature: <span id="temperature">--°C</span>
