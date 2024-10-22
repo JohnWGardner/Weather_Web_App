@@ -1,85 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicon-16x16.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Weather Live</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-            <nav class="navbar navbar-expand-lg">
-                <a href="index.html" class="navbar-brand">Weather Live <i class="fa-solid fa-cloud-moon"></i></a>
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="">Home</a></li>
-                    <li class="nav-item"><a href="">Weather Forecast</a></li>
-                    <li class="nav-item"><a href="">Map</a></li>
-                </ul>
-            </nav>
-    
+      <nav class="navbar navbar-expand-lg">
+        <a href="index.html" class="navbar-brand"
+          >Weather Live <i class="fa-solid fa-cloud-moon"></i
+        ></a>
+        <ul class="navbar-nav">
+          <li class="nav-item"><a href="">Home</a></li>
+          <li class="nav-item"><a href="">Weather Forecast</a></li>
+          <li class="nav-item"><a href="">Map</a></li>
+        </ul>
+      </nav>
     </header>
-   <section> 
-    <div class="jumbotron-fluid">
-        <div class="container">
-            <div class="row">
-            <div class="col-12">
-            <h1>Weather Live</h1>
-            <hr>
-            <p>Getting the weather updates to you wherever you are!</p>
-        </div>
-    </div>
-</div>
-</div>
-</section>
+    <!-- Jumbotron section -->
+    <section>
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Weather Live</h1>
+        <p class="lead">Getting the weather updates to you wherever you are!</p>
+        <hr class="my-4" />
+        <p>Enter your city to get started!</p>
+        <a class="btn btn-primary btn-lg" href="#weather-form" role="button"
+          >Check Weather</a
+        >
+      </div>
+    </section>
 
-<!-- Footer to include favicons and links to github repository WC£ authentication logo and potential social media links -->
-<!-- Footer html passes W3C Authentication -->
+    <!-- Footer to include favicons and links to github repository WC£ authentication logo and potential social media links -->
+    <!-- Footer html passes W3C Authentication -->
 
-<footer class="fixed-bottom" role="content-info">
-<!-- container/row/col -->
-    <div class="container">
+    <footer class="fixed-bottom" role="content-info">
+      <!-- container/row/col -->
+      <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <!-- <h5>About</h5>
+          <div class="col-md-4">
+            <!-- <h5>About</h5>
                  <p></p> -->
-            </div>
-            <!-- col with href and favicons for github, 
+          </div>
+          <!-- col with href and favicons for github, 
             and social media links -->
-            <div class="col-md-12 text-center">
-                <h4>Follow Us!</h4>
-                
-                <!-- Ensure github link updated before final push and deployment -->
-                <a href="https://www.github.com" target="blank" rel="noopener" aria-label="Visit our Github repository (opens in a new tab)" class="socialmedia-icons"><i class="fa-brands fa-github"></i> Github </a>
-                <a href="https://www.twitter.com" target="blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)" class="socialmedia-icons"><i class="fa-brands fa-twitter"></i> Twitter </a>
-                <a href="https://www.facebook.com" target="blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)" class="socialmedia-icons"><i class="fa-brands fa-facebook"></i> Facebook </a>
-                <a href="https://www.pinterest.com" target="blank" rel="noopener" aria-label="Visit our Pinterest page (opens in a new tab)" class="socialmedia-icons"><i class="fa-brands fa-pinterest"></i> Pinterest </a>
-                <a href="https://youtube.com" target="blank" rel="noopener" aria-label="Visit our YouTube page (opens in a new tab)" class="socialmedia-icons"><i class="fa-brands fa-youtube"></i> YouTube </a>
-            </div>
-        </div>
-    </div>
+          <div class="col-md-12 text-center">
+            <h4>Follow Us!</h4>
 
-    <!-- Contacts 
+            <!-- Ensure github link updated before final push and deployment -->
+            <a
+              href="https://www.github.com"
+              target="blank"
+              rel="noopener"
+              aria-label="Visit our Github repository (opens in a new tab)"
+              class="socialmedia-icons"
+              ><i class="fa-brands fa-github"></i> Github
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="blank"
+              rel="noopener"
+              aria-label="Visit our Twitter page (opens in a new tab)"
+              class="socialmedia-icons"
+              ><i class="fa-brands fa-twitter"></i> Twitter
+            </a>
+            <a
+              href="https://www.facebook.com"
+              target="blank"
+              rel="noopener"
+              aria-label="Visit our Facebook page (opens in a new tab)"
+              class="socialmedia-icons"
+              ><i class="fa-brands fa-facebook"></i> Facebook
+            </a>
+            <a
+              href="https://www.pinterest.com"
+              target="blank"
+              rel="noopener"
+              aria-label="Visit our Pinterest page (opens in a new tab)"
+              class="socialmedia-icons"
+              ><i class="fa-brands fa-pinterest"></i> Pinterest
+            </a>
+            <a
+              href="https://youtube.com"
+              target="blank"
+              rel="noopener"
+              aria-label="Visit our YouTube page (opens in a new tab)"
+              class="socialmedia-icons"
+              ><i class="fa-brands fa-youtube"></i> YouTube
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contacts 
      <div>
         <h5>Contact</h5>
         <p></p>
     </div> 
      -->
 
-     <!-- copyright wrap in <div><small> -->
-        <div class="footer-bottom text-center">
-            <small> &copy; 2024 Weather Web App WECASEP24 Hackathon1 </small>
-        </div>
-</footer>
+      <!-- copyright wrap in <div><small> -->
+      <div class="footer-bottom text-center">
+        <small> &copy; 2024 Weather Web App WECASEP24 Hackathon1 </small>
+      </div>
+    </footer>
 
     <script src="assets/js/script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/8ec3b06928.js" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8ec3b06928.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
