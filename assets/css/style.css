@@ -10,13 +10,14 @@ body {
 /* Header */
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
   background-color: #050d35;
 }
 
 .navbar-nav {
   margin-top: 16px;
+  /* align-self:flex-end; */
 }
 .navbar-brand {
   font-size: 30px;
@@ -26,14 +27,20 @@ body {
 }
 .nav-item {
   list-style-type: none;
-  display: inline-block;
+  /* display: inline-block; */
   font-size: 20px;
   padding-right: 60px;
+  display: inline-block;
+  align-content: center;
 }
 
 .nav-item a {
   color: #ceb992;
   text-decoration: none;
+}
+
+.navbar-toggler-icon{
+  color: #ceb992;
 }
 
 /* jumbotron */
