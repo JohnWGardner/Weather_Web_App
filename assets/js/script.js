@@ -35,8 +35,18 @@ async function checkWeather(city) {
     document.getElementById("wind-speed").innerText = "--Km/h";
     const weatherIcon = document.querySelector("#weather-icon");
     weatherIcon.hidden = true;
+
+    // Card still visible for error messages
+    document.getElementById("current-weather-card").hidden = false;
   }
 }
+
+searchBox.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    checkWeather(searchBox.value);
+  }
+});
 
 searchBtn.addEventListener("click", (e) => {
   // e.preventdefault();
