@@ -8,12 +8,27 @@ async function checkWeather(city) {
     const data =  await response.json();
 
     console.log(data)
+    
     document.querySelector(".card-title").innerHTML = data.name;
-    document.querySelector("#temperature").innerHTML = data.main.temp;
+    document.querySelector("#temperature").innerHTML = data.main.temp + "°C";
     document.getElementById("condition").innerText = data.weather[0].main;
-  document.getElementById("humidity").innerText = `${data.current.humidity}%`;
-   
-}
+    document.getElementById("humidity").innerText = data.main.humidity + "%";
+    document.getElementById("wind-speed").innerText = data.wind.speed + "Km/h";   
+
+    const weatherIcon = document.querySelector("#weather-icon");
+    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    weatherIcon.alt = `Weather icon showing ${data.weather[0].description}`;
+    weatherIcon.hidden = false;
+    }
+
+
+    // let locationIcon = document.querySelector('#weather-icon');
+    // const icon = data.weather[0].icon;
+    // locationIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}.png">`;
+
+    // document.getElementById("#weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+    
+
 
 
 
