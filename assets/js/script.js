@@ -4,9 +4,12 @@ const searchBtn = document.getElementById("weatherBtn")
 const searchBox = document.getElementById("city");
 
 async function checkWeather(city) {
+  try {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`);
+    if (!response.ok){
+      throw new Error ('Network response was not ok');
+    }
     const data =  await response.json();
-
     console.log(data)
     
     document.querySelector(".card-title").innerHTML = data.name;
@@ -19,7 +22,17 @@ async function checkWeather(city) {
     weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     weatherIcon.alt = `Weather icon showing ${data.weather[0].description}`;
     weatherIcon.hidden = false;
-    }
+} catch (error) {
+  console.error('Error fetching data:', error);
+  document.querySelector(".card-title").innerHTML = "Error";
+  document.querySelector("#temperature").innerHTML = "--°C";
+  document.getElementById("condition").innerText = "N/A";
+  document.getElementById("humidity").innerText = "--%";
+  document.getElementById("wind-speed").innerText = "--Km/h";
+  const weatherIcon = document.querySelector("#weather-icon");
+  weatherIcon.hidden = true;
+  }
+}
 
 searchBtn.addEventListener("click", (e)=>{
     // e.preventdefault();
