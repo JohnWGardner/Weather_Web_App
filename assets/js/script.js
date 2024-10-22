@@ -21,17 +21,6 @@ async function checkWeather(city) {
     weatherIcon.hidden = false;
     }
 
-
-    // let locationIcon = document.querySelector('#weather-icon');
-    // const icon = data.weather[0].icon;
-    // locationIcon.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}.png">`;
-
-    // document.getElementById("#weather-icon").src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
-    
-
-
-
-
 searchBtn.addEventListener("click", (e)=>{
     // e.preventdefault();
     checkWeather(searchBox.value);
