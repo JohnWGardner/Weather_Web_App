@@ -1,131 +1,168 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome John Gardner,
+**Student's:**  Hodo Ismail, Sol Ray, Paul Jebb, John Gardner<br>
+**Date:**  09/10/2024 <br>
+**cohort:**  WECA- Full Stack Software Developer: Skills Bootcamp <br>
+**Project:**   Hackathon2 weather-app: HTML, CSS, Bootstrap, JS <br>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+- - - -
+# Project Goals #
+## 1. Understand the Purpose:
+- Provide users with a basic understanding of diversity and inclusion in the workplace or educational environment.
+- Present information in a straightforward, organized format that is easy to understand and navigate.
+    
+## 2. Dev Key Goals:
+- Create a visually appealing, easy-to-navigate webpage that introduces diversity and inclusion concepts and offers basic guidance on implementing these practices.
+- Design and implement the webpage within the available resources and timeframe.
+- Ensure the content aligns with the broader goal of promoting diversity and inclusion in the workplace or educational settings.
+- Set a timeline for the development and launch of the webpage, with milestones for content creation, design, and testing.
+- - - -
+# Potential Features: #
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Index Page
 
-## Gitpod Reminders
+- Use Bootstrap’s Jumbotron to introduce the topic with a message and a simple background image or color.
+- Organize content into clear sections usinga simple Bootstrap grid system, with headings and paragraphs that outline key principles of diversity and Equality.
+- A simple list of tips or best practices, styled using Bootstrap’s list group component, to help users understand how to promote diversity.
+- Use Bootstrap’s button styling for links to an external resource, making them easy to identify and click.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- - - -
+# UX/UI #
 
-`python3 -m http.server`
+   ## 1. Target Audience
+   
+  - People looking to gain a basic understanding of diversity and inclusion in the workplace or educational environment.
+  - People specifically looking for gain a basic understanding of diversity and inclusion in the workplace or educational environment.
+  - Users looking for gain a basic understanding of diversity and inclusion in the workplace or educational environment.
 
-A blue button should appear to click: _Make Public_,
+  ## 2. User Stories #
 
-Another blue button should appear to click: _Open Browser_.
+  - As a user, I want to understand the basic concepts of diversity and inclusion, so that I can apply them in my workplace or educational environment.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  ## Acceptance Criteria:
+    - The webpage should have a clear and concise introduction to diversity and inclusion.
+    - The content should be organized into easily digestible sections.
+    - Use simple language and avoid jargon.
 
-A blue button should appear to click: _Make Public_,
+  ### - As a user, I want to find practical tips on promoting diversity and inclusion, so that I can implement these practices effectively.
 
-Another blue button should appear to click: _Open Browser_.
+  ## Acceptance Criteria:
+    - A list of tips or best practices should be prominently displayed.
+    - Tips should be actionable and easy to understand.
+    - As a user, I want to access additional resources on diversity and inclusion, so that I can further my knowledge and understanding.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  ### - As a user, I want to access additional resources on diversity and inclusion, so that I can further my knowledge and understanding.
 
-To log into the Heroku toolbelt CLI:
+  ## Acceptance Criteria:
+    - The webpage should include links to external resources.
+    - Ensure links open in a new tab to keep users on the main page.
+    - As a user, I want the webpage to be visually appealing and easy to navigate, so that I can find the information I need without difficulty.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+  ### - As a user, I want the webpage to be visually appealing and easy to navigate, so that I can find the information I need without difficulty.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+  ## Acceptance Criteria:
+    - Use a well-designed header section for the hero section.
+    - Implement a clean and modern design
+    - Ensure the layout is responsive and works well on different devices.
+    - As a user, I want to see real-life examples and success stories of diversity and inclusion, so that I can be inspired and motivated to take action.
 
-### Connecting your Mongo database
+  ### - As a user, I want to see real-life examples and success stories of diversity and inclusion, so that I can be inspired and motivated to take action.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+  ## Acceptance Criteria:
+    - Include a section with case studies or success stories.
+    - Ensure the examples are relevant and relatable.
+    - As a user, I want to be able to contact someone for more information or support, so that I can get help if I have questions or need guidance.
 
-------
+  ### - As a user, I want to be able to contact someone for more information or support, so that I can get help if I have questions or need guidance.
 
-## Release History
+  ## Acceptance Criteria:
+    - Provide a contact form or email link.
+    - Ensure the contact information is easy to find.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- - - -
+ ## 2. Design Choice
 
-**June 18, 2024,** Add Mongo back into template
+ 
+ 
+ ##  Colour Scheme
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+ vibrant color scheme to emphasise the value of making and being the change
+ 
+ ##  Fonts
 
-**May 28 2024:** Fix Mongo and Links installs
+ standard Jumbo fonts apert from the home page 'why' section
+ 
+ ### Main Content 
 
-**April 26 2024:** Update node version to 16
+ info on diversity and inclusion
+ 
+ ## Wireframes
+    
+  - Main Page Wireframe: /workspace/Equality_and_Diversity/assets/wireframes 
+ 
+ ## Logo
 
-**September 20 2023:** Update Python version to 3.9.17.
+- CSS file is in the assets folder which were used to generate logo files are logo.css /workspace/Equality_and_Diversity/assets/images/logo2.webp
+- Images used are in the assests folder: /workspace/Equality_and_Diversity/assets/images/
+- - - -
+# Testing #
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## HTML Validation
+- Initial HTML Validation was performed using the W3C Mark up service and the results can be found: /workspace/Equality_and_Diversity/assets/Validation
+- A duplicate div has been resolved.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## CSS Validation
+- Initial W3C CSS style sheet validation link 
+- Test W3C Validation CSS style sheet validation 
+- The style.css form passed with only one issue that was with a newer feature that some browsers do not support just yet. I have left this in as the browsers still work as intended.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Accessibility
+- We entered our website through GoogleLighthouse to check the accessabilty score. The  website shows as 87% as shown: assets/Validation/lighthouse.png
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Device Testing
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+We have tested the site with the following devices:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- iPhone
+- Desktop 
+- Chrome Developer Tools (Simulating for all available device options)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The site functioned as expected
+  
+## Browser Testing
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Testing has been done on the following browsers:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Chrome (& Developer tools)
+- Edge
+- Safari
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Testing Breakdown
+- We completed the following tests in assets/Validation, all test passed
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+## Testing user stories
+NA
+## Known Bugs
+NA
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Deployment #
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+How this site was deployed
 
-------
+- In the GitHub repository, navigate to the Settings tab, then choose Pages from the left hand menu 
+- From the source section drop-down menu, select the Main Branch
+- Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment
+- Any changes pushed to the main branch will take effect on the live project
 
-## FAQ about the uptime script
+- The live link is here: https://johnwgardner.github.io/Equality_and_Diversity/index.html
 
-**Why have you added this script?**
+- We used an agile methodology by using early deployment. We could see every change on a live site to aid our development process
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- - - -
 
-**How will this affect me?**
+## Readme
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Ref:  www.codewithfaraz.com for: registration form in about me
+      https://eelslap.com/ for: eelslap
+      https://learn.codeinstitute.net/ for: most code / text /knowledge
