@@ -23,7 +23,7 @@ async function checkWeather(city) { // Asynchronous function to fetch current we
     document.getElementById("wind-speed").innerText = data.wind.speed + "Km/h";
     // Update the weather icon
     const weatherIcon = document.querySelector("#weather-icon");
-    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     weatherIcon.alt = `Weather icon showing ${data.weather[0].description}`;
     weatherIcon.hidden = false;
 
@@ -67,15 +67,15 @@ async function getForecast(city) { // Asynchronous function to fetch 5-day weath
     const wind = forecast.wind.speed;// Get
     
     // Set the weather icon source and alt text
-    const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+    const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@4x.png`;
     weatherIcon.alt = `Weather icon showing ${forecast.weather[0].description}`;
 
     // Add the forecast data to the `forecastHTML` string
     forecastHTML+=
-    `<div class="card mt-2 bg-warning">
-      <div class="card-body">
+    `<div class="card mt-2 bg-warning forecast-card">
+      <div class="card-body text-center">
           <h5 class="card-title">${dateTime}</h5>
-          <img src="${weatherIcon}" alt="${condition}" class="d-block">
+          <img src="${weatherIcon}" alt="${condition}" class="mx-auto d-block">
           <p>Temperature: ${temp}°C</p>
           <p>Condition: ${description}</p>
           <p>Humidity: ${humidity}%</p>
