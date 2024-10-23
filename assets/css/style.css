@@ -5,9 +5,8 @@ body {
   font-family: "Montserrat", Geneva, Verdana, sans-serif;
   align-items: center;
   margin: 0;
-  /* flex: 1; */
-  /*overflow: hidden; /* Hides the scrollba/
-}
+  
+ }
 
 
 /* Header */
@@ -118,6 +117,10 @@ footer {
   color: white;
   padding: 20px;
   border-top: 1px solid #ceb992;
+}
+
+#footer-margin {
+  margin-top: 50px !important;
 }
 
 footer a {
