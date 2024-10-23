@@ -54,14 +54,43 @@ async function getForecast(city) {
     const forecastData = await response.json();
 
     console.log(forecastData);
+  
+    let forecastHTML= `<h2 id="forecast-display-label">5-Day Forecast</h2>`
 
-    const forecastContainer = document.getElementById("forecast-container");
+    for(let i=0; i<forecastData.list.length; i+=8){
+    const forecast=forecastData.list[i];
+    const dateTime = new Date(forecast.dt*1000).toLocaleDateString("en-GB", { weekday: 'long' });
+    const temp = forecast.main.temp;
+    const description = forecast.weather[0].description;
+    const humidity = forecast.main.humidity;
+    const wind = forecast.wind.speed;
+    
 
-    // Clear any previous forecast card
-    forecastContainer.innerHTML = "";
+    const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
+    weatherIcon.alt = `Weather icon showing ${forecast.weather[0].description}`;
+
+  
+    forecastHTML+=
+    `<div class="card mt-2 bg-warning">
+      <div class="card-body">
+          <h5 class="card-title">${dateTime}</h5>
+          <img src="${weatherIcon}" alt="${condition}" class="d-block">
+          <p>Temperature: ${temp}°C</p>
+          <p>Condition: ${description}</p>
+          <p>Humidity: ${humidity}%</p>
+          <p>Wind Speed: ${wind} km/h</p>
+        </div>
+      </div>`
+    }
+    const forecastContainer=document.getElementById("forecast-container");
+ 
+
+    forecastContainer.innerHTML=forecastHTML
+   
   } catch (error) {
     console.log("Error fetching forecast data:", error);
   }
+  document.getElementById("forecast-container").hidden = false;
 }
 
 searchBox.addEventListener("keydown", (e) => {
@@ -73,7 +102,7 @@ searchBox.addEventListener("keydown", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
-  // e.preventdefault();
+  //e.preventdefault();
   checkWeather(searchBox.value);
   getForecast(searchBox.value);
 });

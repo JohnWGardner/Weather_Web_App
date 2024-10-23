@@ -1,5 +1,11 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+<<<<<<< HEAD
+**Student's:**  Hodo Ismail, Sol Rayet, Paul Jebb, John Gardner<br>
+**Date:**  21/10/2024 <br>
+**cohort:**  WECA- Full Stack Software Developer: Skills Bootcamp <br>
+**Project:**   Hackathon2 weather-app: HTML, CSS, Bootstrap, JS <br>
+=======
 **Students:** Hodo Ismail, Sol Rayet, Paul Jebb, John Gardner  
 **Date:** 21/10/2024  
 **Cohort:** WECA - Full Stack Software Developer: Skills Bootcamp  
@@ -8,6 +14,7 @@
 ---
 
 # Project Goals
+>>>>>>> e15c9ff3e2a0fda246e0be2008008ce036d1a62e
 
 ## 1. Understand the Purpose:
 
