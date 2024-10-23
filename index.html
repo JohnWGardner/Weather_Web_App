@@ -71,7 +71,7 @@
     </section>
 
     <!-- Weather form section-->
-    <section>
+    <section aria-labelledby="weather-form-label">
       <div
         class="container mt-5"
         id="weather-form"
@@ -81,6 +81,7 @@
         <!-- <form id="weather-form"> -->
         <div class="form-row">
           <div class="col">
+            <label for="city" class="sr-only">City Name</label> <!--Adds screen reader label -->
             <input
               type="text"
               id="city"
@@ -91,7 +92,7 @@
             />
           </div>
           <div class="col">
-            <button id="weatherBtn" class="btn btn-primary">Get Weather</button>
+            <button id="weatherBtn" class="btn btn-primary" aria-label="Get Weather">Get Weather</button>
           </div>
         </div>
         <!-- </form> -->
