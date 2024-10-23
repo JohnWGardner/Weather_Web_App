@@ -87,7 +87,7 @@
 
 ## Color Scheme
 
-- Warm color scheme used for forecast cards to enhance visual appeal and indicate specific weather conditions (e.g., warning backgrounds).
+- Warm color scheme used for forecast cards to enhance visual appeal.
 
 ## Fonts
 
@@ -150,9 +150,3 @@ The app was deployed using **GitHub Pages**:
 - **Team Members**: Hodo Ismail, Sol Rayet, Paul Jebb, and John Gardner, for contributing to the development and testing.
 
 ---
-
-### Note: **Updates**
-
-- Added sections: API Integration, Credits, Technologies Used.
-- Updated user stories and acceptance criteria to reflect real-time weather and forecast functionality.
-- Included API error handling.
