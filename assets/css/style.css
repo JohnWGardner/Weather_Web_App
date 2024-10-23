@@ -5,8 +5,8 @@ body {
   font-family: "Montserrat", Geneva, Verdana, sans-serif;
   align-items: center;
   margin: 0;
-  flex: 1;
-  overflow: hidden; /* Hides the scrollbar 
+  /* flex: 1; */
+  /*overflow: hidden; /* Hides the scrollba/
 }
 
 
@@ -113,7 +113,7 @@ hr {
 /* Footer */
 
 footer {
-  position:sticky;
+  
   background-color: #050d35;
   color: white;
   padding: 20px;
