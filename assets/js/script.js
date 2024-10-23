@@ -1,11 +1,11 @@
 const apiKey = "2b7ee3f098e996eea38e81986f8a163b"; // API key for OpenWeatherMap
 const apiURL =
-  "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; // Base OpenWeatherMap URL for current weather API
+  "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; // OpenWeatherMap Base URL for current weather API
 const forecastApiUrl =
-  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";// Base OpenWeatherMap URL for 5-day forecast API
+  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";// OpenWeatherMap Base URL for 5-day forecast API
 
 const searchBtn = document.getElementById("weatherBtn"); // Get reference to the search button element
-const searchBox = document.getElementById("city"); // Get reference to the search button element
+const searchBox = document.getElementById("city"); // Get reference to the search box element
 
 async function checkWeather(city) { // Asynchronous function to fetch current weather data
   try {
@@ -47,12 +47,13 @@ async function checkWeather(city) { // Asynchronous function to fetch current we
 
 async function getForecast(city) { // Asynchronous function to fetch 5-day weather forecast data
   const response = await fetch(forecastApiUrl + city + `&appid=${apiKey}`);
+  // similar functionality to above
   try {
     if (!response.ok) {
       throw new Error("Failed to fetch forecast data!");
     }
 
-    const forecastData = await response.json();
+    const forecastData = await response.json();//similar functionality to above
 
     console.log(forecastData);
   
