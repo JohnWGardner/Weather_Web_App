@@ -54,13 +54,7 @@ async function getForecast(city) {
     const forecastData = await response.json();
 
     console.log(forecastData);
-
-   
-   
-    // const forecastContainer = document.getElementById("forecast-container");
-
-    // Clear any previous forecast card
-    // forecastContainer.innerHTML = "";
+  
     let forecastHTML= `<h2 id="forecast-display-label">5-Day Forecast</h2>`
 
     for(let i=0; i<forecastData.list.length; i+=8){
@@ -105,7 +99,7 @@ searchBox.addEventListener("keydown", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
-  // e.preventdefault();
+  e.preventdefault();
   checkWeather(searchBox.value);
   getForecast(searchBox.value);
 });
