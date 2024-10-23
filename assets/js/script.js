@@ -71,16 +71,19 @@ async function getForecast(city) {
 
   
     forecastHTML+=
-    `<div class="card-body">
+    `<div class="card mt-2 bg-warning">
+      <div class="card-body">
           <h5 class="card-title">${dateTime}</h5>
           <img src="${weatherIcon}" alt="${condition}" class="d-block">
           <p>Temperature: ${temp}°C</p>
           <p>Condition: ${description}</p>
           <p>Humidity: ${humidity}%</p>
           <p>Wind Speed: ${wind} km/h</p>
-        </div>`
+        </div>
+      </div>`
     }
     const forecastContainer=document.getElementById("forecast-container");
+ 
 
     forecastContainer.innerHTML=forecastHTML
    
@@ -99,7 +102,7 @@ searchBox.addEventListener("keydown", (e) => {
 });
 
 searchBtn.addEventListener("click", (e) => {
-  e.preventdefault();
+  //e.preventdefault();
   checkWeather(searchBox.value);
   getForecast(searchBox.value);
 });
