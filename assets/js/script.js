@@ -1,6 +1,9 @@
 const apiKey = "2b7ee3f098e996eea38e81986f8a163b";
 const apiURL =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const forecastApiUrl =
+  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";
+
 const searchBtn = document.getElementById("weatherBtn");
 const searchBox = document.getElementById("city");
 
@@ -41,14 +44,36 @@ async function checkWeather(city) {
   }
 }
 
+async function getForecast(city) {
+  const response = await fetch(forecastApiUrl + city + `&appid=${apiKey}`);
+  try {
+    if (!response.ok) {
+      throw new Error("Failed to fetch forecast data!");
+    }
+
+    const forecastData = await response.json();
+
+    console.log(forecastData);
+
+    const forecastContainer = document.getElementById("forecast-container");
+
+    // Clear any previous forecast card
+    forecastContainer.innerHTML = "";
+  } catch (error) {
+    console.log("Error fetching forecast data:", error);
+  }
+}
+
 searchBox.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     e.preventDefault();
     checkWeather(searchBox.value);
+    getForecast(searchBox.value);
   }
 });
 
 searchBtn.addEventListener("click", (e) => {
   // e.preventdefault();
   checkWeather(searchBox.value);
+  getForecast(searchBox.value);
 });
