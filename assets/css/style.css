@@ -92,7 +92,7 @@ hr {
 #weather-display .card {
   margin-top: 20px;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 15px;
   /* add subtle shadow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -107,6 +107,10 @@ hr {
   font-size: 1.1rem;
   margin: 10px 0;
   text-align: center;
+}
+
+.forecast-card{
+  border-radius: 15px;
 }
 
 /* Footer */
