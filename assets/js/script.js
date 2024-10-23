@@ -61,6 +61,7 @@ async function getForecast(city) {
 
     // Clear any previous forecast card
     // forecastContainer.innerHTML = "";
+    let forecastHTML= `<h2 id="forecast-display-label">5-Day Forecast</h2>`
 
     for(let i=0; i<forecastData.list.length; i+=8){
     const forecast=forecastData.list[i];
@@ -74,9 +75,8 @@ async function getForecast(city) {
     const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}.png`;
     weatherIcon.alt = `Weather icon showing ${forecast.weather[0].description}`;
 
-
-
-    forecastHTML=
+  
+    forecastHTML+=
     `<div class="card-body">
           <h5 class="card-title">${dateTime}</h5>
           <img src="${weatherIcon}" alt="${condition}" class="d-block">
@@ -86,8 +86,10 @@ async function getForecast(city) {
           <p>Wind Speed: ${wind} km/h</p>
         </div>`
     }
-    
+    const forecastContainer=document.getElementById("forecast-container");
+
     forecastContainer.innerHTML=forecastHTML
+   
   } catch (error) {
     console.log("Error fetching forecast data:", error);
   }
