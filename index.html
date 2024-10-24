@@ -31,25 +31,10 @@
   <body>
     <header>
 
-      
-       
-       
-      
-        
-      <nav class="navbar navbar-expand-lg" aria-label="Main Navigation">
+      <nav class="navbar navbar-expand-lg aria-label="Main Navigation">
         <a href="index.html" class="navbar-brand"
           >Weather Live <i class="fa-solid fa-cloud-moon"></i
         ></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i
-            ></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a href="" role="menuitem">Home</a></li>
-          <li class="nav-item"><a href="" role="menuitem">Weather Forecast</a></li>
-          <li class="nav-item"><a href="" role="menuitem">Map</a></li>
-        </ul>
       </nav>
     </header>
     <!-- Jumbotron section -->
@@ -58,14 +43,17 @@
         <h1 class="display-4">Weather Live</h1>
         <p class="lead">Getting the weather updates to you wherever you are!</p>
         <hr class="my-2" />
-        <p id="jum-p">Enter your city to get started!</p>
+        <p id="jum-p">
+          Use your current location or enter your city to get started!
+        </p>
         <a
           id="jum-btn"
           class="btn btn-primary btn-lg"
           href="#weather-form"
           role="button"
-          aria-label="Check Weather"
-          >Check Weather</a
+
+          aria-label="Use My Location"
+          >Use My Location</a
         >
       </div>
     </section>
@@ -77,7 +65,7 @@
         id="weather-form"
         aria-labelledby="weather-form-label"
       >
-        <h2 id="weather-form-label">Check ther Weather</h2>
+        <h2 id="weather-form-label">Check the Weather</h2>
         <!-- <form id="weather-form"> -->
         <div class="form-row">
           <div class="col">
@@ -86,7 +74,7 @@
               type="text"
               id="city"
               class="form-control"
-              placeholder="Enter city name"
+              placeholder="Enter city, country (e.g., London, UK)"
               aria-label="City Name"
               required
             />
@@ -133,23 +121,21 @@
 
     <!-- 5-day forecast display section -->
     <section>
-      
       <div
         class="container mt-5"
         id="forecast-container"
         aria-labelledby="forecast-display-label"
-       hidden
+        hidden
       >
-      <!-- <h2 id="forecast-display-label">5-Day Forecast</h2> -->
         <!-- Cards for forecast data will be added here -->
       </div>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
     <!-- Footer to include favicons and links to github repository WC£ authentication logo and potential social media links -->
     <!-- Footer html passes W3C Authentication -->
@@ -169,44 +155,38 @@
 
             <!-- Ensure github link updated before final push and deployment -->
             <a
+
               href="https://github.com/JohnWGardner/Weather_Web_App"
+
               target="blank"
               rel="noopener"
               aria-label="Visit our Github repository (opens in a new tab)"
               class="socialmedia-icons"
-              ><i class="fa-brands fa-github"></i> Github
+              ><i class="fa-brands fa-github"></i> John
             </a>
             <a
-              href="https://www.twitter.com"
+              href="https://github.com/HodoIsmail"
               target="blank"
               rel="noopener"
-              aria-label="Visit our Twitter page (opens in a new tab)"
+              aria-label="Visit our Github repository (opens in a new tab)"
               class="socialmedia-icons"
-              ><i class="fa-brands fa-twitter"></i> Twitter
+              ><i class="fa-brands fa-github"></i> Hodo
             </a>
             <a
-              href="https://www.facebook.com"
+              href="https://github.com/Gambit1583"
               target="blank"
               rel="noopener"
-              aria-label="Visit our Facebook page (opens in a new tab)"
+              aria-label="Visit our Github repository (opens in a new tab)"
               class="socialmedia-icons"
-              ><i class="fa-brands fa-facebook"></i> Facebook
+              ><i class="fa-brands fa-github"></i> Paul
             </a>
             <a
-              href="https://www.pinterest.com"
+              href="https://github.com/Rayet01"
               target="blank"
               rel="noopener"
-              aria-label="Visit our Pinterest page (opens in a new tab)"
+              aria-label="Visit our Github repository (opens in a new tab)"
               class="socialmedia-icons"
-              ><i class="fa-brands fa-pinterest"></i> Pinterest
-            </a>
-            <a
-              href="https://youtube.com"
-              target="blank"
-              rel="noopener"
-              aria-label="Visit our YouTube page (opens in a new tab)"
-              class="socialmedia-icons"
-              ><i class="fa-brands fa-youtube"></i> YouTube
+              ><i class="fa-brands fa-github"></i> Sol
             </a>
           </div>
         </div>

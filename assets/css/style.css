@@ -5,9 +5,7 @@ body {
   font-family: "Montserrat", Geneva, Verdana, sans-serif;
   align-items: center;
   margin: 0;
-  
- }
-
+}
 
 /* Header */
 
@@ -41,7 +39,7 @@ body {
   text-decoration: none;
 }
 
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   color: #ceb992;
 }
 
@@ -92,7 +90,7 @@ hr {
 #weather-display .card {
   margin-top: 20px;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 15px;
   /* add subtle shadow */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -109,10 +107,13 @@ hr {
   text-align: center;
 }
 
+.forecast-card {
+  border-radius: 15px;
+}
+
 /* Footer */
 
 footer {
-  
   background-color: #050d35;
   color: white;
   padding: 20px;
@@ -161,8 +162,7 @@ footer a {
 }
 
 @media (max-width: 484px) {
-  #jum-p,
-  #jum-btn {
+  #jum-p {
     display: none;
   }
 }
@@ -173,8 +173,8 @@ footer a {
   }
 }
 
-@media (max-width: 375px){
-  .navbar-brand i{
-      display: none;
+@media (max-width: 375px) {
+  .navbar-brand i {
+    display: none;
   }
 }
