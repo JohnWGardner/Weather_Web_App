@@ -51,11 +51,6 @@
 
 ## 2. User Stories
 
-Real-time Weather Data
-
-
-## User Stories
-
 ### Real-time Weather Data
 
 **As a user**, I want to input my city name and get the current weather data so that I can plan my immediate activities.
