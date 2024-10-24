@@ -102,7 +102,7 @@
 
 ## CSS Validation
 
-- CSS validation was performed using W3C's CSS Validator.
+- CSS validation was performed using W3C's CSS Validator. http://jigsaw.w3.org/css-validator/validator$link
 
 ## Accessibility
 

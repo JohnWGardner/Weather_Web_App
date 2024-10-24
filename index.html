@@ -30,14 +30,15 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg">
+
+      <nav class="navbar navbar-expand-lg aria-label="Main Navigation">
         <a href="index.html" class="navbar-brand"
           >Weather Live <i class="fa-solid fa-cloud-moon"></i
         ></a>
       </nav>
     </header>
     <!-- Jumbotron section -->
-    <section>
+    <section aria-labelledby="weather-live-heading">
       <div class="jumbotron-fluid text-center py-4">
         <h1 class="display-4">Weather Live</h1>
         <p class="lead">Getting the weather updates to you wherever you are!</p>
@@ -50,13 +51,15 @@
           class="btn btn-primary btn-lg"
           href="#weather-form"
           role="button"
+
+          aria-label="Use My Location"
           >Use My Location</a
         >
       </div>
     </section>
 
     <!-- Weather form section-->
-    <section>
+    <section aria-labelledby="weather-form-label">
       <div
         class="container mt-5"
         id="weather-form"
@@ -66,6 +69,7 @@
         <!-- <form id="weather-form"> -->
         <div class="form-row">
           <div class="col">
+            <label for="city" class="sr-only">City Name</label> <!--Adds screen reader label -->
             <input
               type="text"
               id="city"
@@ -76,7 +80,7 @@
             />
           </div>
           <div class="col">
-            <button id="weatherBtn" class="btn btn-primary">Get Weather</button>
+            <button id="weatherBtn" class="btn btn-primary" aria-label="Get Weather">Get Weather</button>
           </div>
         </div>
         <!-- </form> -->
@@ -84,7 +88,7 @@
     </section>
 
     <!-- Weather display section -->
-    <section>
+    <section aria-labelledby="weather-display-label">
       <div
         class="container mt-5"
         id="weather-display"
@@ -94,7 +98,7 @@
         <h2 id="weather-display-label">Current Weather</h2>
         <div class="card bg-warning">
           <div class="card-body">
-            <h5 class="card-title">City Name</h5>
+            <h5 class="card-title" aria-live="polite">City Name</h5>
             <img
               hidden
               class="mx-auto d-block"
@@ -151,7 +155,9 @@
 
             <!-- Ensure github link updated before final push and deployment -->
             <a
-              href="https://github.com/JohnWGardner"
+
+              href="https://github.com/JohnWGardner/Weather_Web_App"
+
               target="blank"
               rel="noopener"
               aria-label="Visit our Github repository (opens in a new tab)"
@@ -197,6 +203,13 @@
       <div class="text-center">
         <small> &copy; 2024 Weather Web App WECASEP24 Hackathon1 </small>
       </div>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a>
+        </p>
     </footer>
 
     <script src="assets/js/script.js" defer></script>
