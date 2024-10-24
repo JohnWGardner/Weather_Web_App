@@ -207,9 +207,14 @@
 
 - Initial HTML validation was done using the W3C Markup Validation Service.
 
+![Screenshot 2024-10-24 at 13 57 08](https://github.com/user-attachments/assets/3c9dd41d-3082-4c14-b360-0548f2e0fe53)
+
+
 ## CSS Validation
 
 - CSS validation was performed using W3C's CSS Validator. http://jigsaw.w3.org/css-validator/validator$link
+
+![Screenshot 2024-10-24 at 13 30 00](https://github.com/user-attachments/assets/443f2f9c-cbc5-42ea-8c11-0c44b7668f22)
 
 ## Accessibility
 
@@ -248,7 +253,9 @@ The app was deployed using **GitHub Pages**:
 - **OpenWeatherMap API**: Used for fetching live weather data.
 - **Bootstrap**: For layout, components, and responsive design.
 - **Code Institute**: For project templates and guidance.
-- **Faraz**: Inspiration for the registration form in the "About Me" section.
+- **Font Awesome**: For fonts.
+- **Favicon**: For favicon image.
+- **Freepik**: For jumbotron image.
 - **Team Members**: Hodo Ismail, Sol Rayet, Paul Jebb, and John Gardner, for contributing to the development and testing.
 
 ---
