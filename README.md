@@ -119,6 +119,8 @@
 
 ---
 
+# Bugs
+
 # Deployment
 
 The app was deployed using **GitHub Pages**:
