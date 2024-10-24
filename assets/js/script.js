@@ -2,15 +2,17 @@ const apiKey = "2b7ee3f098e996eea38e81986f8a163b"; // API key for OpenWeatherMap
 const apiURL =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; // OpenWeatherMap Base URL for current weather API
 const forecastApiUrl =
-  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=";// OpenWeatherMap Base URL for 5-day forecast API
+  "https://api.openweathermap.org/data/2.5/forecast?units=metric&q="; // OpenWeatherMap Base URL for 5-day forecast API
 
 const searchBtn = document.getElementById("weatherBtn"); // Get reference to the search button element
 const searchBox = document.getElementById("city"); // Get reference to the search box element
 
-async function checkWeather(city) { // Asynchronous function to fetch current weather data
+async function checkWeather(city) {
+  // Asynchronous function to fetch current weather data
   try {
     const response = await fetch(apiURL + city + `&appid=${apiKey}`); // Make an API request to fetch current weather data for the specified city
-    if (!response.ok) { // Check if the response status is not OK (i.e., something went wrong)
+    if (!response.ok) {
+      // Check if the response status is not OK (i.e., something went wrong)
       throw new Error("Network response was not ok"); // Throw an error if the response is not OK
     }
     const data = await response.json(); // Parse the JSON response and assign it to the `data` variable
@@ -45,7 +47,8 @@ async function checkWeather(city) { // Asynchronous function to fetch current we
   }
 }
 
-async function getForecast(city) { // Asynchronous function to fetch 5-day weather forecast data
+async function getForecast(city) {
+  // Asynchronous function to fetch 5-day weather forecast data
   const response = await fetch(forecastApiUrl + city + `&appid=${apiKey}`);
   // similar functionality to above
   try {
@@ -53,27 +56,30 @@ async function getForecast(city) { // Asynchronous function to fetch 5-day weath
       throw new Error("Failed to fetch forecast data!");
     }
 
-    const forecastData = await response.json();//similar functionality to above
+    const forecastData = await response.json(); //similar functionality to above
 
     console.log(forecastData);
-  
-    let forecastHTML= `<h2 id="forecast-display-label">5-Day Forecast</h2>` // Initialize a variable to hold the HTML content for the forecast
 
-    for(let i=0; i<forecastData.list.length; i+=8){ // Loop through the forecast data, stepping every 8 entries (each entry is 3 hours apart)
-    const forecast=forecastData.list[i]; // Get the forecast data for the current day
-    const dateTime = new Date(forecast.dt*1000).toLocaleDateString("en-GB", { weekday: 'long' }); // Returns weather data in 3-hour intervals for 5 days and converts the timestamp to a readable date
-    const temp = forecast.main.temp;// Get
-    const description = forecast.weather[0].description;// Get
-    const humidity = forecast.main.humidity;// Get
-    const wind = forecast.wind.speed;// Get
-    
-    // Set the weather icon source and alt text
-    const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@4x.png`;
-    weatherIcon.alt = `Weather icon showing ${forecast.weather[0].description}`;
+    let forecastHTML = `<h2 id="forecast-display-label">5-Day Forecast</h2>`; // Initialize a variable to hold the HTML content for the forecast
 
-    // Add the forecast data to the `forecastHTML` string
-    forecastHTML+=
-    `<div class="card mt-2 bg-warning forecast-card">
+    for (let i = 8; i < forecastData.list.length; i += 8) {
+      // Loop through the forecast data, stepping every 8 entries (each entry is 3 hours apart)
+      const forecast = forecastData.list[i]; // Get the forecast data for the current day
+      const dateTime = new Date(forecast.dt * 1000).toLocaleDateString(
+        "en-GB",
+        { weekday: "long" }
+      ); // Returns weather data in 3-hour intervals for 5 days and converts the timestamp to a readable date
+      const temp = forecast.main.temp; // Get
+      const description = forecast.weather[0].description; // Get
+      const humidity = forecast.main.humidity; // Get
+      const wind = forecast.wind.speed; // Get
+
+      // Set the weather icon source and alt text
+      const weatherIcon = `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@4x.png`;
+      weatherIcon.alt = `Weather icon showing ${forecast.weather[0].description}`;
+
+      // Add the forecast data to the `forecastHTML` string
+      forecastHTML += `<div class="card mt-2 bg-warning forecast-card">
       <div class="card-body text-center">
           <h5 class="card-title">${dateTime}</h5>
           <img src="${weatherIcon}" alt="${condition}" class="mx-auto d-block">
@@ -82,14 +88,14 @@ async function getForecast(city) { // Asynchronous function to fetch 5-day weath
           <p>Humidity: ${humidity}%</p>
           <p>Wind Speed: ${wind} km/h</p>
         </div>
-      </div>`
+      </div>`;
     }
-    const forecastContainer=document.getElementById("forecast-container"); // Find the forecast container in the HTML document 
+    const forecastContainer = document.getElementById("forecast-container"); // Find the forecast container in the HTML document
 
-    forecastContainer.innerHTML=forecastHTML; // Insert the constructed forecastHTML into the forecast container
-   
+    forecastContainer.innerHTML = forecastHTML; // Insert the constructed forecastHTML into the forecast container
+
     // Catch any errors that occur during the fetch and log them to the console
-  } catch (error) { 
+  } catch (error) {
     console.log("Error fetching forecast data:", error);
   }
   document.getElementById("forecast-container").hidden = false; // Make the forecast container visible
