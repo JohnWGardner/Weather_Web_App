@@ -51,13 +51,107 @@
 
 ## 2. User Stories
 
-- As a user, I want to check the current weather in a specific city so that I can plan my day accordingly.
+Real-time Weather Data
 
-  - **Acceptance Criteria:** A search form with a clear input field for city name and a submit button.
-  - A section that shows the city name, temperature, condition, and other relevant data after submission.
 
-- As a user, I want to see a 5-day weather forecast to help plan my activities for the week.
-  - **Acceptance Criteria:** The forecast should be displayed as cards with key weather info: temperature, humidity, and wind speed.
+## User Stories
+
+### Real-time Weather Data
+
+**As a user**, I want to input my city name and get the current weather data so that I can plan my immediate activities.
+- **Acceptance Criteria**:
+  - User can enter a city name into a search box.
+  - Upon submitting, the current weather data for the specified city is displayed.
+  - Data includes temperature, weather conditions, humidity, and wind speed.
+  - Information updates in real-time.
+
+**As a user**, I want to see the current temperature, so I know how to dress appropriately.
+- **Acceptance Criteria**:
+  - The temperature is displayed in degrees Celsius.
+  - The temperature updates to reflect real-time data.
+
+**As a user**, I want to see the current weather conditions (e.g., sunny, rainy, cloudy), so I can decide if I need an umbrella or sunglasses.
+- **Acceptance Criteria**:
+  - Weather conditions are displayed using descriptive text and relevant icons.
+  - The information updates to reflect real-time conditions.
+
+### 5-day Weather Forecast
+
+**As a user**, I want to see the temperature forecast for the next five days, so I can plan my week ahead.
+- **Acceptance Criteria**:
+  - The 5-day forecast is displayed upon request.
+  - Each day's forecast includes the temperature, weather conditions, humidity, and wind speed.
+  - The forecast updates regularly to reflect accurate data.
+
+### Interactive Map
+
+**As a user**, I want to be able to click on a map to select my location, so I can get weather data for that specific point.
+- **Acceptance Criteria**:
+  - An interactive map is available for users to select their location.
+  - Selecting a location on the map updates the weather data to that specific point.
+
+### Integration with Weather API
+
+**As a user**, I want the weather data to update in real-time, so I always have the latest information.
+- **Acceptance Criteria**:
+  - The site pulls real-time data from a reliable weather API.
+  - Data refreshes at regular intervals to ensure accuracy.
+
+**As a user**, I want the weather data to be accurate, so I can rely on the information provided by the site.
+- **Acceptance Criteria**:
+  - Weather data is sourced from a trusted and reliable weather API.
+  - API error handling is implemented to manage data retrieval failures.
+
+### User Interface and Experience
+
+**As a user**, I want the site to be visually appealing, so it's pleasant to use.
+- **Acceptance Criteria**:
+  - The site's design is clean and modern with weather icons and graphics.
+  - Visual elements are aligned and consistent.
+
+**As a user**, I want the weather information to be presented in a clear and easy-to-read format, so I can quickly understand the data.
+- **Acceptance Criteria**:
+  - Weather data is displayed in a structured and organized manner.
+  - Fonts, colors, and layout enhance readability.
+
+**As a user**, I want the site to load quickly, so I don't have to wait long to get the information I need.
+- **Acceptance Criteria**:
+  - The site is optimized for fast loading times.
+  - Performance is regularly monitored and improved.
+
+**As a user**, I want the site to work well on my smartphone, so I can check the weather on the go.
+- **Acceptance Criteria**:
+  - The site is fully responsive, adapting to various screen sizes.
+  - All functionalities work seamlessly on both desktop and mobile devices.
+
+### Site Owner Stories
+
+#### API Integration
+
+**As a site owner**, I want to integrate a reliable weather API, so I can provide accurate weather data.
+- **Acceptance Criteria**:
+  - The weather API is integrated and functional.
+  - API requests are managed efficiently and handle errors gracefully.
+
+#### User Interface
+
+**As a site owner**, I want to design a clean and intuitive interface, so users can easily navigate the site.
+- **Acceptance Criteria**:
+  - The interface is user-friendly and intuitive.
+  - Navigation is straightforward and consistent.
+
+#### Performance and Reliability
+
+**As a site owner**, I want the site to be optimized for speed, so users have a fast experience.
+- **Acceptance Criteria**:
+  - The site is optimized for quick load times.
+  - Regular performance checks and optimizations are in place.
+
+**As a site owner**, I want the site to be reliable and have minimal downtime, so users can access it whenever they need.
+- **Acceptance Criteria**:
+  - The site is hosted on a reliable platform.
+  - Downtime is minimized through regular maintenance and monitoring.
+
 
 ---
 
