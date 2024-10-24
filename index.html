@@ -100,7 +100,7 @@
     </section>
 
     <!-- Weather display section -->
-    <section>
+    <section aria-labelledby="weather-display-label">
       <div
         class="container mt-5"
         id="weather-display"
@@ -110,7 +110,7 @@
         <h2 id="weather-display-label">Current Weather</h2>
         <div class="card bg-warning">
           <div class="card-body">
-            <h5 class="card-title">City Name</h5>
+            <h5 class="card-title" aria-live="polite">City Name</h5>
             <img
               hidden
               class="mx-auto d-block"
