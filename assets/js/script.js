@@ -4,14 +4,24 @@ const apiURL =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; // OpenWeatherMap Base URL for current weather API
 const forecastApiUrl =
   "https://api.openweathermap.org/data/2.5/forecast?units=metric&q="; // OpenWeatherMap Base URL for 5-day forecast API
+const geoforecastURL = "https://api.openweathermap.org/data/2.5/forecast?units=metric&"
+const geoweatherURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&"
 
 const searchBtn = document.getElementById("weatherBtn"); // Get reference to the search button element
 const searchBox = document.getElementById("city"); // Get reference to the search box element
 
-async function checkWeather(city) {
+async function checkWeather(city=null,lon=null,lat=null) {
   // Asynchronous function to fetch current weather data
+  let url;
+  if (lon && lat){
+    url= geoweatherURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  }else if(city){
+    url = apiURL + city + `&appid=${apiKey}`
+  }else{
+    console.error("Invalid location provided")
+  }
   try {
-    const response = await fetch(apiURL + city + `&appid=${apiKey}`); // Make an API request to fetch current weather data for the specified city
+    const response = await fetch(url); // Make an API request to fetch current weather data for the specified city
     if (!response.ok) {
       // Check if the response status is not OK (i.e., something went wrong)
       throw new Error("Network response was not ok"); // Throw an error if the response is not OK
@@ -48,9 +58,17 @@ async function checkWeather(city) {
   }
 }
 
-async function getForecast(city) {
+async function getForecast(city=null,lon=null,lat=null) {
   // Asynchronous function to fetch 5-day weather forecast data
-  const response = await fetch(forecastApiUrl + city + `&appid=${apiKey}`);
+  let url;
+  if (lon && lat){
+    url= geoforecastURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  }else if(city){
+    url = forecastapiURL + city + `&appid=${apiKey}`
+  }else{
+    console.error("Invalid location provided")
+  }
+  const response = await fetch(url);
   // similar functionality to above
   try {
     if (!response.ok) {
@@ -102,6 +120,22 @@ async function getForecast(city) {
   document.getElementById("forecast-container").hidden = false; // Make the forecast container visible
 }
 
+function getUserLocation() {
+  if (navigator.geolocation) {
+   navigator.geolocation.getCurrentPosition((position) =>{
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    checkWeather(null,lat,lon)
+
+   },(errorCallback)=>{
+    console.error("Unable to retrieve location")
+   }
+  )
+   } else {
+           alert("Geolocation not supported by browser.");
+  }
+}
 // Jumbotron event listener
 const jumbotronBtn = document.getElementById("jum-btn");
 
