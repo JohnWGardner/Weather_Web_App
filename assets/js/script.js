@@ -127,6 +127,7 @@ function getUserLocation() {
     const lon = position.coords.longitude;
 
     checkWeather(null,lat,lon)
+    getForecast(null,lat,lon)
 
    },(errorCallback)=>{
     console.error("Unable to retrieve location")
