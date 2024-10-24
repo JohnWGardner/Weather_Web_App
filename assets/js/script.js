@@ -64,7 +64,7 @@ async function getForecast(city=null,lon=null,lat=null) {
   if (lon && lat){
     url= geoforecastURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
   }else if(city){
-    url = forecastapiURL + city + `&appid=${apiKey}`
+    url = forecastApiUrl + city + `&appid=${apiKey}`
   }else{
     console.error("Invalid location provided")
   }
