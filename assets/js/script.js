@@ -100,6 +100,15 @@ async function getForecast(city) {
   }
   document.getElementById("forecast-container").hidden = false; // Make the forecast container visible
 }
+
+// Jumbotron event listener
+const jumbotronBtn = document.getElementById("jum-btn");
+
+jumbotronBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  getUserLocation();
+});
+
 // Add an event listener to the search box to detect 'Enter' key presses
 searchBox.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
