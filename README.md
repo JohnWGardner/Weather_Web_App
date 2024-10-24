@@ -292,6 +292,12 @@ The app was deployed using **GitHub Pages**:
 
 ---
 
+# Future Enhancements:
+- Geo Location: Although the geo-location feature is functional, it currently retrieves incorrect data and city names. Given more time, we would diagnose and resolve this issue to ensure accurate data retrieval.
+- Interactive Map: With additional time, we plan to integrate an interactive map that allows users to hover over and click on a city to get weather conditions.
+
+---
+
 # Credits
 
 - **OpenWeatherMap API**: Used for fetching live weather data.
