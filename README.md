@@ -7,9 +7,10 @@
 ![Screenshot 2024-10-24 at 13 10 28](https://github.com/user-attachments/assets/72e8bd44-1979-420f-8d4a-00d1ea07eae4)
 
 ---
-![project_board](https://github.com/user-attachments/assets/7c81d773-2298-499e-8972-af15f8b58b60)
 
 # Project Goals
+
+![project_board](https://github.com/user-attachments/assets/7c81d773-2298-499e-8972-af15f8b58b60)
 
 ## 1. Understand the Purpose:
 
