@@ -62,7 +62,7 @@ async function getForecast(city) {
 
     let forecastHTML = `<h2 id="forecast-display-label">5-Day Forecast</h2>`; // Initialize a variable to hold the HTML content for the forecast
 
-    for (let i = 8; i < forecastData.list.length; i += 8) {
+    for (let i = 7; i < forecastData.list.length; i += 8) {
       // Loop through the forecast data, stepping every 8 entries (each entry is 3 hours apart)
       const forecast = forecastData.list[i]; // Get the forecast data for the current day
       const dateTime = new Date(forecast.dt * 1000).toLocaleDateString(
