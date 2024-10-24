@@ -31,15 +31,18 @@
 ## 1. Home Page
 
 - A weather search form using Bootstrap components, allowing users to input a city and retrieve weather data.
+  ![Weather Search Form](./assets/images/weather-search-form.png)
 - A real-time display of current weather data, including temperature, condition, humidity, and wind speed.
+  ![Current Weather Data ](./assets/images/Current-Weather.png)
 - A 5-day weather forecast, using Bootstrap cards, showing daily conditions, temperatures, humidity, and wind speeds.
-- Fetching data dynamically from the OpenWeatherMap API.
-- Error handling with messages if the city is not found or if there’s an API issue.
+  ![5-day Forecast](./assets/images/5-day-forecast.png)
 
 ## 2. Additional Features:
 
 - Responsiveness ensured using Bootstrap 4.6, so the app works across various screen sizes.
 - Clear navigation and intuitive UI with accessible forms.
+- Fetching data dynamically from the OpenWeatherMap API.
+- Error handling with messages if the city is not found or if there’s an API issue.
 
 ---
 
@@ -208,7 +211,6 @@
 - Initial HTML validation was done using the W3C Markup Validation Service.
 
 ![Screenshot 2024-10-24 at 13 57 08](https://github.com/user-attachments/assets/3c9dd41d-3082-4c14-b360-0548f2e0fe53)
-
 
 ## CSS Validation
 

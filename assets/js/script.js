@@ -4,21 +4,23 @@ const apiURL =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; // OpenWeatherMap Base URL for current weather API
 const forecastApiUrl =
   "https://api.openweathermap.org/data/2.5/forecast?units=metric&q="; // OpenWeatherMap Base URL for 5-day forecast API
-const geoforecastURL = "https://api.openweathermap.org/data/2.5/forecast?units=metric&"
-const geoweatherURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&"
+const geoforecastURL =
+  "https://api.openweathermap.org/data/2.5/forecast?units=metric&";
+const geoweatherURL =
+  "https://api.openweathermap.org/data/2.5/weather?units=metric&";
 
 const searchBtn = document.getElementById("weatherBtn"); // Get reference to the search button element
 const searchBox = document.getElementById("city"); // Get reference to the search box element
 
-async function checkWeather(city=null,lon=null,lat=null) {
+async function checkWeather(city = null, lon = null, lat = null) {
   // Asynchronous function to fetch current weather data
   let url;
-  if (lon && lat){
-    url= geoweatherURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
-  }else if(city){
-    url = apiURL + city + `&appid=${apiKey}`
-  }else{
-    console.error("Invalid location provided")
+  if (lon && lat) {
+    url = geoweatherURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  } else if (city) {
+    url = apiURL + city + `&appid=${apiKey}`;
+  } else {
+    console.error("Invalid location provided");
   }
   try {
     const response = await fetch(url); // Make an API request to fetch current weather data for the specified city
@@ -58,15 +60,15 @@ async function checkWeather(city=null,lon=null,lat=null) {
   }
 }
 
-async function getForecast(city=null,lon=null,lat=null) {
+async function getForecast(city = null, lon = null, lat = null) {
   // Asynchronous function to fetch 5-day weather forecast data
   let url;
-  if (lon && lat){
-    url= geoforecastURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
-  }else if(city){
-    url = forecastApiUrl + city + `&appid=${apiKey}`
-  }else{
-    console.error("Invalid location provided")
+  if (lon && lat) {
+    url = geoforecastURL + `lat=${lat}&lon=${lon}&appid=${apiKey}`;
+  } else if (city) {
+    url = forecastApiUrl + city + `&appid=${apiKey}`;
+  } else {
+    console.error("Invalid location provided");
   }
   const response = await fetch(url);
   // similar functionality to above
@@ -122,19 +124,20 @@ async function getForecast(city=null,lon=null,lat=null) {
 
 function getUserLocation() {
   if (navigator.geolocation) {
-   navigator.geolocation.getCurrentPosition((position) =>{
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
 
-    checkWeather(null,lat,lon)
-    getForecast(null,lat,lon)
-
-   },(errorCallback)=>{
-    console.error("Unable to retrieve location")
-   }
-  )
-   } else {
-           alert("Geolocation not supported by browser.");
+        checkWeather(null, lat, lon);
+        getForecast(null, lat, lon);
+      },
+      (errorCallback) => {
+        console.error("Unable to retrieve location");
+      }
+    );
+  } else {
+    alert("Geolocation not supported by browser.");
   }
 }
 // Jumbotron event listener
