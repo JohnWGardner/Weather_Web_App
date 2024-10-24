@@ -35,6 +35,7 @@
 - A real-time display of current weather data, including temperature, condition, humidity, and wind speed.
   ![Current Weather Data ](./assets/images/Current-Weather.png)
 - A 5-day weather forecast, using Bootstrap cards, showing daily conditions, temperatures, humidity, and wind speeds.
+
   ![5-day Forecast](./assets/images/5-day-forecast.png)
 
 ## 2. Additional Features:
@@ -235,49 +236,46 @@
 
 # Bugs
 
-  ## Five day forecast
+## Five day forecast
 
 - When Adding the JS function for the 5 day forecast errors 401 and 404 were thrown.
-  By adding getForecast(search.box) to the event listener we were able to make progress 
+  By adding getForecast(search.box) to the event listener we were able to make progress
   but still had error 401.
   We commented out response catch.error at line 50 and this removed the final error.
 
-- There was a single line of duplicate JS code which was preventing the function from   
+- There was a single line of duplicate JS code which was preventing the function from  
   runnning correctly. When the duplicate line was removed and an event listener added this resolved the issue.
 
   ## Forecast loop
 
-  - We created individual Const for date/time, forecast, temperature, description, 
-    humidity and wind speed. Initial tests caused the code to print directly to the page. 
+  - We created individual Const for date/time, forecast, temperature, description,
+    humidity and wind speed. Initial tests caused the code to print directly to the page.
     Further testing showed that we need to tell the function to run in english GB.
     Having corrected this it was no longer printing to screen but the cards were displaying the incorrect day of the week on the forecast cards.
-    
-    Adding a let outside of the for loop and a const to grab the relevant HTML information 
+
+    Adding a let outside of the for loop and a const to grab the relevant HTML information
     along with a const outside of the for loop to grab further information by ID and passing that into the HTML resolved this issue.
 
   ## Footer
 
   ### Temporary fix
 
-  - The footer was overlapping with the last forecast card. 
+  - The footer was overlapping with the last forecast card.
   - Adjusted padding and CSS functions in order attempt a fix. This showed no result.
     removed fixed position in HTML and again adjusted CSS to have a sticky or static position which also showed no result.
-    Replaced fixed-bottom in HTML and attempted a temporary fix using br between the final 
-    card and the footer. After adding five of these it has resolved the overlap issue. This will be reviewed in a later iteration. 
+    Replaced fixed-bottom in HTML and attempted a temporary fix using br between the final
+    card and the footer. After adding five of these it has resolved the overlap issue. This will be reviewed in a later iteration.
 
 ## Use my location
 
 - We identified that this function was not working. Using dev tools we were able to identify
   that this was due to a lack of information relating to Longitude and latitude.
 
-- By adding an if and else function to both the forecast and five day forecast w hoped t to 
+- By adding an if and else function to both the forecast and five day forecast w hoped t to
   accurately pinpoint a users location by city.
   This initially gave no reponse as the position and the latitude had not been correctly defined. so we altered the temperal literals for the latitude and longitude which then threw a further error 404 under our check weather function.
-  As this appeared to be a URL issue we altered fom APIurl to geoForecastURL and geoWeather URL respectively. 
+  As this appeared to be a URL issue we altered fom APIurl to geoForecastURL and geoWeather URL respectively.
   This fixed the cards by showing weather data but assigned no location and the information was not accurate to the testers location having checked this with other existing weather applications.
-
-
-
 
 # Deployment
 
